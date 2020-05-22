@@ -11,7 +11,7 @@ const comparators = [];
 
 comparators.push({
 	type: 'comparator',
-	resolver: num,
+	resolve: num,
 	key: 'equalTo',
 	token: '==',
 	exec: equalTo,
@@ -20,7 +20,7 @@ comparators.push({
 
 comparators.push({
 	type: 'comparator',
-	resolver: num,
+	resolve: num,
 	key: 'notEqualTo',
 	token: '==',
 	exec: notEqualTo,
@@ -28,7 +28,7 @@ comparators.push({
 });
 comparators.push({
 	type: 'comparator',
-	resolver: num,
+	resolve: num,
 	key: 'greaterThan',
 	token: '>',
 	exec: greaterThan,
@@ -37,7 +37,7 @@ comparators.push({
 
 comparators.push({
 	type: 'comparator',
-	resolver: num,
+	resolve: num,
 	key: 'greaterThanEqual',
 	token: '>=',
 	exec: greaterThanEqual,
@@ -46,7 +46,7 @@ comparators.push({
 
 comparators.push({
 	type: 'comparator',
-	resolver: num,
+	resolve: num,
 	key: 'lessThan',
 	token: '<',
 	exec: lessThan,
@@ -55,7 +55,7 @@ comparators.push({
 
 comparators.push({
 	type: 'comparator',
-	resolver: num,
+	resolve: num,
 	key: 'lessThanEqual',
 	token: '<=',
 	exec: lessThanEqual,

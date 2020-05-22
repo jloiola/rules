@@ -6,7 +6,7 @@ const comparators = [];
 
 comparators.push({
 	type: 'comparator',
-	resolver: bool,
+	resolve: bool,
 	key: 'isTrue',
 	token: 'is true',
 	exec: isTrue,
@@ -15,7 +15,7 @@ comparators.push({
 
 comparators.push({
 	type: 'comparator',
-	resolver: bool,
+	resolve: bool,
 	key: 'isFalse',
 	token: 'is false',
 	exec: isFalse,

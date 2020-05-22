@@ -5,5 +5,5 @@ module.exports = {
 	jsonPath: require('./json-path'),
 	moment: require('./moment'),
 	str: require('./str'),
-	undefined: () => {},
+	identity: (value) => value,
 };

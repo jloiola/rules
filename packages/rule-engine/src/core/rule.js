@@ -1,4 +1,4 @@
-const Predicate = require('./predicate.coffee');
+const Operator = require('./operator');
 const {v4: uuidv4} = require('uuid');
 
 class Rule {
@@ -18,22 +18,22 @@ class Rule {
 				created: undefined,
 				updated: undefined,
 			},
-			predicate: [['and', []]],
+			rule: [['and', []]],
 		});
 
 		this.deserialize(initConfig);
 	}
 
-	deserialize({key, display, predicate, meta}) {
+	deserialize({key, display, rule, meta}) {
 		Object.assign(this, {key, display, meta});
-		this.predicate = new Predicate(predicate);
+		this.rule = new Operator(rule);
 		return this;
 	}
 
 	serialize() {
-		const predicate = this.predicate.serialize();
+		const rule = this.rule.serialize();
 		const {key, display, meta} = this;
-		return Object.assign({}, {key, display, predicate, meta});
+		return Object.assign({}, {key, display, rule, meta});
 	}
 
 	clone() {
@@ -42,7 +42,7 @@ class Rule {
 	}
 
 	run(context) {
-		this.predicate.exec(context);
+		this.rule.exec(context);
 	}
 }
 

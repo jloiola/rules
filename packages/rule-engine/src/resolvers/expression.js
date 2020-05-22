@@ -1,4 +1,4 @@
-const {error} = require('ulog')('resolver:expression');
+const {error} = require('ulog')('resolve:expression');
 const get = require('lodash.get');
 const tokens = new RegExp(/\$([.A-z]*)/, 'g');
 

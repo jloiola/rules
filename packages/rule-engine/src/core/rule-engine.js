@@ -19,6 +19,7 @@ class RuleEngine {
 		ruleConfigs.forEach((ruleConfig) => {
 			try {
 				this.rules.push(new Rule(ruleConfig));
+				console.log(this.rules);
 			} catch (error) {
 				this.parseErrors.push(ruleConfig);
 				console.debug('rule failed', error, ruleConfig);

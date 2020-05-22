@@ -1,5 +1,6 @@
-const {asMap: field} = require('../operands/field');
-const {asMap: userDefined} = require('../operands/user-defined');
+const Field = require('../operands/field');
+const Value = require('../operands/value');
+const Expression = require('../operands/expression');
 
 class Operand {
 	constructor(operandConfig = []) {
@@ -7,11 +8,13 @@ class Operand {
 	}
 
 	deserialize(operandConfig) {
-		const [type, args] = operandConfig;
-		if (type === 'field') {
-			Object.assign(this, field[type], args);
-		} else {
-			Object.assign(this, userDefined[type]);
+		const [operand] = operandConfig;
+		if (operand === 'field') {
+			Object.assign(this, new Field().deserialize(operandConfig));
+		} else if (operand === 'value') {
+			Object.assign(this, new Value().deserialize(operandConfig));
+		} else if (operand === 'expression') {
+			Object.assign(this, new Expression().deserialize(operandConfig));
 		}
 	}
 }

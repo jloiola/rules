@@ -23,7 +23,7 @@ const comparators = [];
 
 comparators.push({
 	type: 'comparator',
-	resolver: momentResolver,
+	resolve: momentResolver,
 	key: 'olderThan',
 	token: 'is older than',
 	exec: olderThan,
@@ -32,7 +32,7 @@ comparators.push({
 
 comparators.push({
 	type: 'comparator',
-	resolver: momentResolver,
+	resolve: momentResolver,
 	key: 'hasHappened',
 	token: 'is within the last',
 	exec: hasHappened,
@@ -41,7 +41,7 @@ comparators.push({
 
 comparators.push({
 	type: 'comparator',
-	resolver: momentResolver,
+	resolve: momentResolver,
 	key: 'willHappen',
 	token: 'is within the next',
 	exec: willHappen,

@@ -15,7 +15,7 @@
 	"scripts": {
 		"test": "jest --silent",
 		"test:ci": "CI=true jest",
-		"test:watch": "jest --runInBand --no-cache --watch --silent",
+		"test:watch": "jest --runInBand --no-cache --watch",
 		"test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand --no-cache --watch --silent",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",

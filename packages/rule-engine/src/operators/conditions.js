@@ -25,5 +25,5 @@ module.exports = {
 	asMap: conditions.reduce((acc, condition) => {
 		acc[condition.key] = condition;
 		return acc;
-	}),
+	}, {}),
 };

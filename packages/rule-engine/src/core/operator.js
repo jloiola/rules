@@ -1,6 +1,6 @@
 // const operators = require('../operators');
 const Condition = require('./Condition');
-const Comparator = require('./Comparator');
+const Comparison = require('./Comparison');
 
 class Operator {
 	constructor(operatorConfig) {
@@ -9,13 +9,14 @@ class Operator {
 
 	deserialize(operatorConfigs) {
 		return operatorConfigs.map((operatorConfig) => {
-			const [operator, ...args] = operatorConfig;
-			if (operator.type === 'condition') {
+			const [operator, args] = operatorConfig;
+			if (['and', 'or'].includes(operator)) {
 				const condition = new Condition(operatorConfig);
-				condition.deserialize(args);
+				condition.args = this.deserialize(args);
 				return condition;
 			} else {
-				return new Comparator(operatorConfig);
+				const comparison = new Comparison(operatorConfig);
+				return comparison;
 			}
 		});
 	}
