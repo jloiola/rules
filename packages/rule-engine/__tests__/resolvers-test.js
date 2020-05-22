@@ -1,5 +1,5 @@
 const resolvers = require('../src/resolvers');
-const {bool, expression, float, int, jsonPath, moment, str} = resolvers;
+const {bool, expression, num, jsonPath, moment, str} = resolvers;
 
 describe('resolvers', () => {
 	describe('bool', () => {
@@ -47,23 +47,13 @@ describe('resolvers', () => {
 		});
 	});
 
-	describe('float', () => {
-		it('resolves floats', () => {
+	describe('num', () => {
+		it('resolves nums', () => {
 			expect.assertions(4);
-			expect(float(10)).toStrictEqual(10);
-			expect(float(10.001)).toStrictEqual(10.001);
-			expect(float('10.001')).toStrictEqual(10.001);
-			expect(float('asdasd')).toStrictEqual(0);
-		});
-	});
-
-	describe('int', () => {
-		it('resolves ints', () => {
-			expect.assertions(4);
-			expect(int(10)).toStrictEqual(10);
-			expect(int(10.001)).toStrictEqual(10);
-			expect(int('10.001')).toStrictEqual(10);
-			expect(int('asdasd')).toStrictEqual(0);
+			expect(num(10)).toStrictEqual(10);
+			expect(num(10.001)).toStrictEqual(10);
+			expect(num('10.001')).toStrictEqual(10);
+			expect(num('asdasd')).toStrictEqual(0);
 		});
 	});
 
@@ -119,7 +109,7 @@ describe('resolvers', () => {
 			expect(str('im a string')).toStrictEqual('im a string');
 		});
 
-		it('resolves integer as string', () => {
+		it('resolves numeger as string', () => {
 			expect.assertions(1);
 			expect(str(1)).toStrictEqual('1');
 		});

@@ -1,0 +1,27 @@
+{
+	"env": {
+		"browser": false,
+		"commonjs": true,
+		"es6": true,
+		"node": true,
+		"jest/globals": true
+	},
+	"plugins": ["jsdoc", "unicorn", "jest"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:jest/all",
+		"plugin:prettier/recommended",
+		"plugin:jsdoc/recommended",
+		"plugin:unicorn/recommended"
+	],
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2018
+	},
+	"parser": "babel-eslint",
+	"settings": {},
+	"rules": {
+		"linebreak-style": ["error", "unix"],
+		"unicorn/prevent-abbreviations": ["off"]
+	}
+}
