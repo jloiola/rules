@@ -1,4 +1,4 @@
-const {and, or} = require('./condition');
+const {and, or} = require('./executors/condition');
 const conditions = [];
 
 conditions.push({

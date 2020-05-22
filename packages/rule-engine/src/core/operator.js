@@ -4,7 +4,6 @@ const Comparator = require('./Comparator');
 
 class Operator {
 	constructor(operatorConfig) {
-		this.type = 'operator';
 		return this.deserialize(operatorConfig);
 	}
 

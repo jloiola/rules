@@ -1,7 +1,7 @@
-const bool = require('../executors/bool');
-const base = require('../executors/base');
-const moment = require('../executors/moment');
-const str = require('../executors/str');
+const bool = require('./executors/bool');
+const base = require('./executors/base');
+const moment = require('./executors/moment');
+const str = require('./executors/str');
 
 const comparators = [];
 
