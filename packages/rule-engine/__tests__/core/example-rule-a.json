@@ -1,0 +1,38 @@
+{
+	"key": "example-rule-a",
+	"display": {
+		"name": "An example rule",
+		"description": "An example rule description",
+		"rank": 0,
+		"color": "#9E2400",
+		"showBadge": false,
+		"showAggregate": false,
+		"ruleSetKey": "actionItems"
+	},
+	"rule": [
+		[
+			"and",
+			[
+				[
+					["equalTo", "num"],
+					["field", "num", "birthday.month"],
+					["value", "num", 5]
+				],
+				[
+					["equalTo", "num"],
+					["field", "num", "birthday.year"],
+					["value", "num", 1990]
+				]
+			]
+		]
+	],
+	"meta": {
+		"created": {
+			"by": {
+				"personId": 761520,
+				"fullName": "JL"
+			},
+			"at": "2020-05-01T15:45:10+0000"
+		}
+	}
+}

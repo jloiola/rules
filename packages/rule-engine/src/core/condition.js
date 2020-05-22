@@ -6,12 +6,12 @@ class Condition {
 	}
 
 	deserialize(operatorConfig) {
-		const [operatorFunc] = operatorConfig;
-		Object.assign(this, asMap[operatorFunc]);
+		const [operator] = operatorConfig;
+		Object.assign(this, asMap[operator]);
 	}
 
-	serialize(operatorFunc, operatorArgs) {
-		Object.assign(this, {operatorFunc, operatorArgs});
+	serialize(operator, args) {
+		Object.assign(this, {operator, args});
 	}
 }
 

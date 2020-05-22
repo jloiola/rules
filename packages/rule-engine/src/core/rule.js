@@ -26,8 +26,7 @@ class Rule {
 
 	deserialize({key, display, rule, meta}) {
 		Object.assign(this, {key, display, meta});
-		this.rule = new Operator(rule);
-		return this;
+		this.rootOperator = new Operator(rule)[0];
 	}
 
 	serialize() {
@@ -42,7 +41,8 @@ class Rule {
 	}
 
 	run(context) {
-		this.rule.exec(context);
+		const result = this.rootOperator.exec(context, this.rootOperator.args);
+		return result;
 	}
 }
 
