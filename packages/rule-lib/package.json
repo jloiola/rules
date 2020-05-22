@@ -1,0 +1,50 @@
+{
+	"name": "rule-lib",
+	"version": "0.0.0",
+	"description": "> TODO: description",
+	"author": "jloiola <jeff.loiola@gmail.com>",
+	"homepage": "",
+	"license": "ISC",
+	"directories": {
+		"lib": "lib",
+		"test": "__tests__"
+	},
+	"files": [
+		"lib"
+	],
+	"scripts": {
+		"test": "jest--silent",
+		"test:ci": "CI=true jest",
+		"test:watch": "jest --runInBand --no-cache --watch --silent",
+		"test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand --no-cache --watch --silent",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"lint-staged": "lint-staged"
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix"
+		]
+	},
+	"dependencies": {
+		"babel-eslint": "10.1.0",
+		"lodash.clone": "4.5.0",
+		"lodash.get": "4.4.2",
+		"lodash.orderby": "4.6.0",
+		"moment-timezone": "0.5.31",
+		"ulog": "2.0.0-beta.7",
+		"uuid": "8.1.0"
+	},
+	"devDependencies": {
+		"eslint": "6.8.0",
+		"eslint-config-prettier": "6.11.0",
+		"eslint-plugin-jest": "23.8.2",
+		"eslint-plugin-jsdoc": "^24.0.0",
+		"eslint-plugin-prettier": "3.1.3",
+		"eslint-plugin-unicorn": "^19.0.1",
+		"jest": "25.4.0",
+		"lint-staged": "10.1.7",
+		"nodemon": "^2.0.3",
+		"prettier": "2.0.5"
+	}
+}
