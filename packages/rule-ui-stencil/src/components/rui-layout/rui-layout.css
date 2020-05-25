@@ -1,0 +1,7 @@
+:host {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  background-color: var(--colors-gray-100);
+  box-sizing: border-box;
+}

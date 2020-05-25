@@ -1,0 +1,29 @@
+@import "variables.css";
+@import "reset.css";
+
+:root {
+    --theme-color: var(--colors-gray-800);
+    --theme-background-color: var(--colors-current);
+    --theme-border-color: var(--colors-gray-200);
+    --theme-placeholder-color: var(--colors-gray-400);
+}
+
+html, body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+
+rui-pane::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+rui-pane::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+rui-pane::-webkit-scrollbar-corner {
+  background-color: transparent;
+}

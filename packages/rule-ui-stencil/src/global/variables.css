@@ -1,0 +1,266 @@
+:root {
+    --shadows-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadows-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadows-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadows-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadows-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadows-outline: 0 0 0 3px rgba(66, 153, 225, 0.6);
+    --shadows-inner: inset 0 2px 4px 0 rgba(0,0,0,0.06);
+    --shadows-none: none;
+
+    --breakpoints-sm: 30rem;
+    --breakpoints-md: 48rem;
+    --breakpoints-lg: 62rem;
+    --breakpoints-xl: 80rem;
+
+    --z-indices-hide: -1;
+    --z-indices-auto: auto;
+    --z-indices-base: 0;
+    --z-indices-docked: 10;
+    --z-indices-dropdown: 1000;
+    --z-indices-sticky: 1100;
+    --z-indices-banner: 1200;
+    --z-indices-overlay: 1300;
+    --z-indices-modal: 1400;
+    --z-indices-popover: 1500;
+    --z-indices-skipLink: 1600;
+    --z-indices-toast: 1700;
+    --z-indices-tooltip: 1800;
+
+    --radii-none: 0;
+    --radii-sm: 0.125rem;
+    --radii-md: 0.25rem;
+    --radii-lg: 0.5rem;
+    --radii-full: 9999px;
+
+    --opacity-0: 0;
+    --opacity-20: 0.2;
+    --opacity-40: 0.4;
+    --opacity-60: 0.6;
+    --opacity-80: 0.8;
+    --opacity-100: 1;
+
+    --borders-none: 0;
+    --borders-1px: 1px solid;
+    --borders-2px: 2px solid;
+    --borders-4px: 4px solid;
+
+    --border-widths-xl: 2rem;
+    --border-widths-lg: 1rem;
+    --border-widths-md: 0.5rem;
+    --border-widths-sm: 0.25rem;
+    --border-widths-xs: 0.125rem;
+    --border-widths-2xs: 0.0625rem;
+    --border-widths-none: 0;
+
+    --space-px: 1px;
+    --space-0: 0;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+    --space-32: 8rem;
+    --space-40: 10rem;
+    --space-48: 12rem;
+    --space-56: 14rem;
+    --space-64: 16rem;
+
+    --sizes-full: 100%;
+    --sizes-3xs: 14rem;
+    --sizes-2xs: 16rem;
+    --sizes-xs: 20rem;
+    --sizes-sm: 24rem;
+    --sizes-md: 28rem;
+    --sizes-lg: 32rem;
+    --sizes-xl: 36rem;
+    --sizes-2xl: 42rem;
+    --sizes-3xl: 48rem;
+    --sizes-4xl: 56rem;
+    --sizes-5xl: 64rem;
+    --sizes-6xl: 72rem;
+
+    --colors-transparent: transparent;
+    --colors-current: currentColor;
+    --colors-black: #000;
+    --colors-white: #fff;
+
+    --colors-white-alpha-50: rgba(255, 255, 255, 0.04);
+    --colors-white-alpha-100: rgba(255, 255, 255, 0.06);
+    --colors-white-alpha-200: rgba(255, 255, 255, 0.08);
+    --colors-white-alpha-300: rgba(255, 255, 255, 0.16);
+    --colors-white-alpha-400: rgba(255, 255, 255, 0.24);
+    --colors-white-alpha-500: rgba(255, 255, 255, 0.36);
+    --colors-white-alpha-600: rgba(255, 255, 255, 0.48);
+    --colors-white-alpha-700: rgba(255, 255, 255, 0.64);
+    --colors-white-alpha-800: rgba(255, 255, 255, 0.80);
+    --colors-white-alpha-900: rgba(255, 255, 255, 0.92);
+
+    --colors-black-alpha-50: rgba(0, 0, 0, 0.04);
+    --colors-black-alpha-100: rgba(0, 0, 0, 0.06);
+    --colors-black-alpha-200: rgba(0, 0, 0, 0.08);
+    --colors-black-alpha-300: rgba(0, 0, 0, 0.16);
+    --colors-black-alpha-400: rgba(0, 0, 0, 0.24);
+    --colors-black-alpha-500: rgba(0, 0, 0, 0.36);
+    --colors-black-alpha-600: rgba(0, 0, 0, 0.48);
+    --colors-black-alpha-700: rgba(0, 0, 0, 0.64);
+    --colors-black-alpha-800: rgba(0, 0, 0, 0.80);
+    --colors-black-alpha-900: rgba(0, 0, 0, 0.92);
+
+    --colors-gray-50: #F7FAFC;
+    --colors-gray-100: #EDF2F7;
+    --colors-gray-200: #E2E8F0;
+    --colors-gray-300: #CBD5E0;
+    --colors-gray-400: #A0AEC0;
+    --colors-gray-500: #718096;
+    --colors-gray-600: #4A5568;
+    --colors-gray-700: #2D3748;
+    --colors-gray-800: #1A202C;
+    --colors-gray-900: #171923;
+
+    --colors-red-50: #fff5f5;
+    --colors-red-100: #fed7d7;
+    --colors-red-200: #feb2b2;
+    --colors-red-300: #fc8181;
+    --colors-red-400: #f56565;
+    --colors-red-500: #e53e3e;
+    --colors-red-600: #c53030;
+    --colors-red-700: #9b2c2c;
+    --colors-red-800: #822727;
+    --colors-red-900: #63171b;
+
+    --colors-orange-50: #FFFAF0;
+    --colors-orange-100: #FEEBC8;
+    --colors-orange-200: #FBD38D;
+    --colors-orange-300: #F6AD55;
+    --colors-orange-400: #ED8936;
+    --colors-orange-500: #DD6B20;
+    --colors-orange-600: #C05621;
+    --colors-orange-700: #9C4221;
+    --colors-orange-800: #7B341E;
+    --colors-orange-900: #652B19;
+
+    --colors-yellow-50: #fffff0;
+    --colors-yellow-100: #fefcbf;
+    --colors-yellow-200: #faf089;
+    --colors-yellow-300: #f6e05e;
+    --colors-yellow-400: #ecc94b;
+    --colors-yellow-500: #d69e2e;
+    --colors-yellow-600: #b7791f;
+    --colors-yellow-700: #975a16;
+    --colors-yellow-800: #744210;
+    --colors-yellow-900: #5F370E;
+
+    --colors-green-50: #f0fff4;
+    --colors-green-100: #c6f6d5;
+    --colors-green-200: #9ae6b4;
+    --colors-green-300: #68d391;
+    --colors-green-400: #48bb78;
+    --colors-green-500: #38a169;
+    --colors-green-600: #2f855a;
+    --colors-green-700: #276749;
+    --colors-green-800: #22543d;
+    --colors-green-900: #1C4532;
+
+    --colors-teal-50: #E6FFFA;
+    --colors-teal-100: #B2F5EA;
+    --colors-teal-200: #81E6D9;
+    --colors-teal-300: #4FD1C5;
+    --colors-teal-400: #38B2AC;
+    --colors-teal-500: #319795;
+    --colors-teal-600: #2C7A7B;
+    --colors-teal-700: #285E61;
+    --colors-teal-800: #234E52;
+    --colors-teal-900: #1D4044;
+
+    --colors-blue-50: #ebf8ff;
+    --colors-blue-100: #ceedff;
+    --colors-blue-200: #90cdf4;
+    --colors-blue-300: #63b3ed;
+    --colors-blue-400: #4299e1;
+    --colors-blue-500: #3182ce;
+    --colors-blue-600: #2a69ac;
+    --colors-blue-700: #1e4e8c;
+    --colors-blue-800: #153e75;
+    --colors-blue-900: #1a365d;
+
+    --colors-cyan-50: #EDFDFD;
+    --colors-cyan-100: #C4F1F9;
+    --colors-cyan-200: #9DECF9;
+    --colors-cyan-300: #76E4F7;
+    --colors-cyan-400: #0BC5EA;
+    --colors-cyan-500: #00B5D8;
+    --colors-cyan-600: #00A3C4;
+    --colors-cyan-700: #0987A0;
+    --colors-cyan-800: #086F83;
+    --colors-cyan-900: #065666;
+
+    --colors-purple-50: #faf5ff;
+    --colors-purple-100: #e9d8fd;
+    --colors-purple-200: #d6bcfa;
+    --colors-purple-300: #b794f4;
+    --colors-purple-400: #9f7aea;
+    --colors-purple-500: #805ad5;
+    --colors-purple-600: #6b46c1;
+    --colors-purple-700: #553c9a;
+    --colors-purple-800: #44337a;
+    --colors-purple-900: #322659;
+
+    --colors-pink-50: #fff5f7;
+    --colors-pink-100: #fed7e2;
+    --colors-pink-200: #fbb6ce;
+    --colors-pink-300: #f687b3;
+    --colors-pink-400: #ed64a6;
+    --colors-pink-500: #d53f8c;
+    --colors-pink-600: #b83280;
+    --colors-pink-700: #97266d;
+    --colors-pink-800: #702459;
+    --colors-pink-900: #521B41;
+
+    --letter-spacings-tighter: -0.05em;
+    --letter-spacings-tight: -0.025em;
+    --letter-spacings-normal: 0;
+    --letter-spacings-wide: 0.025em;
+    --letter-spacings-wider: 0.05em;
+    --letter-spacings-widest: 0.1em;
+
+    --line-heights-normal: normal;
+    --line-heights-none: 1;
+    --line-heights-shorter: 1.25;
+    --line-heights-short: 1.375;
+    --line-heights-base: 1.5;
+    --line-heights-tall: 1.625;
+    --line-heights-taller: 2;
+
+    --font-weights-hairline: 100;
+    --font-weights-thin: 200;
+    --font-weights-light: 300;
+    --font-weights-normal: 400;
+    --font-weights-medium: 500;
+    --font-weights-semibold: 600;
+    --font-weights-bold: 700;
+    --font-weights-extrabold: 800;
+    --font-weights-black: 900;
+
+    --fonts-heading: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+    --fonts-body: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+    --fonts-mono: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace';
+
+    --font-sizes-xs: 0.75rem;
+    --font-sizes-sm: 0.875rem;
+    --font-sizes-md: 1rem;
+    --font-sizes-lg: 1.125rem;
+    --font-sizes-xl: 1.25rem;
+    --font-sizes-2xl: 1.5rem;
+    --font-sizes-3xl: 1.875rem;
+    --font-sizes-4xl: 2.25rem;
+    --font-sizes-5xl: 3rem;
+    --font-sizes-6xl: 4rem;
+}

@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: var(--space-0);
+  background-color: var(--colors-white);
+  box-sizing: border-box;
+}
+
+:host(.fixed-scroll) {
+  overflow: hidden;
+}
